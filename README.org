@@ -1,0 +1,11 @@
+#+title: Mac .config
+
+* Window management
+** Yabai setup
+[[https://github.com/koekeishiya/yabai]]
+*** Skhd
+https://github.com/koekeishiya/skhd for setting key shortcuts (for Yabai and other)
+*** Status bar
+Using [[https://github.com/cmacrae/spacebar][spacebar]], nice and minimal.
+** Terminal
+Using https://alacritty.org here.
