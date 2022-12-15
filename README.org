@@ -1,4 +1,4 @@
-#+title: Mac .config
+#+title: Mac .config directory
 
 * Window management
 ** Yabai setup
