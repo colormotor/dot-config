@@ -76,6 +76,7 @@ yabai -m rule --add app="Preview" space=web manage=off
 yabai -m rule --add app="^Microsoft Outlook$" space=mail
 yabai -m rule --add app="^Mail$" space=mail
 yabai -m rule --add app="^Calendar$" space=mail
+yabai -m rule --add app="^Shift$" space=mail
 
 yabai -m rule --add app="^Discord$" space=social manage=off
 yabai -m rule --add app="^Signal$" space=social manage=off

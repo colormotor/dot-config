@@ -1,11 +1,4 @@
 # See homebewpath.. share/skhd/examples/skhdrc for more info
-
-# open terminal window
-ctrl + alt + cmd + rshift - return :  open -n -a 'Alacritty.app'
-# open a finder window
-ctrl + alt + cmd + rshift - w :  open ~
-
-
 ctrl + alt + cmd + rshift - down : yabai -m window --focus stack.next || yabai -m window --focus south
 ctrl + alt + cmd + rshift - up : yabai -m window --focus stack.prev || yabai -m window --focus north
 ctrl + alt + cmd + rshift + alt - left : yabai -m window --focus west
@@ -43,4 +36,12 @@ ctrl + alt + cmd + rshift + shift - s : launchctl kickstart -k "gui/${UID}/homeb
 
 
 ctrl + alt + cmd + rshift + shift - d : yabai -m window --display recent
+
+# Open emacs
 ctrl + alt + cmd + rshift - e: open -n -a /Applications/Emacs.app
+# Open process monitor
+ctrl + alt + cmd + rshift - p: /Applications/Alacritty.app/Contents/MacOS/alacritty -e htop
+# open terminal window
+ctrl + alt + cmd + rshift - return :  open -n -a 'Alacritty.app'
+# open a finder window
+ctrl + alt + cmd + rshift - n :  open ~
