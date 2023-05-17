@@ -7,7 +7,7 @@ yabai -m config                                 \
     focus_follows_mouse          off            \
     window_origin_display        default        \
     window_placement             second_child   \
-    window_topmost               off            \
+    window_topmost               on             \
     window_shadow                on             \
     window_animation_duration    0.0            \
     window_opacity_duration      0.0            \
@@ -40,8 +40,8 @@ yabai -m config                                 \
 #
 # setup spaces
 #
-for _ in $(yabai -m query --spaces | jq '.[].index | select(. > 6)'); do
-  yabai -m space --destroy 7
+for _ in $(yabai -m query --spaces | jq '.[].index | select(. > 7)'); do
+  yabai -m space --destroy 8
 done
 
 function setup_space {
@@ -64,6 +64,7 @@ setup_space 3 mail
 setup_space 4 social
 setup_space 5 media
 setup_space 6 design
+setup_space 7 other
 
 # window rules
 yabai -m rule --add app="^Emacs$" space=code
@@ -90,14 +91,29 @@ yabai -m rule --add app="Affinity Photo" space=design manage=off
 yabai -m rule --add app="Microsoft Word" space=design manage=off
 yabai -m rule --add app="Blender" space=design manage=off
 yabai -m rule --add app="Microsoft PowerPoint" space=design manage=off
+yabai -m rule --add app="^Max$" space=design manage=off
 
 yabai -m rule --add app="^Zoom$" manage=off
+yabai -m rule --add app="^QuickTime Player$" manage=off
 yabai -m rule --add app="^(Calculator|System Preferences|Archive Utility)$" manage=off
 yabai -m rule --add app="^App Store$" manage=off
 yabai -m rule --add title="Software Update" manage=off
 yabai -m rule --add app="System Information" title="About This Mac" manage=off
+yabai -m rule --add app="(?i)^python.*" manage=off
+yabai -m rule --add app="^PsychoPy$" manage=off
 
 yabai -m config external_bar all:26:0
+
+# # applications with custom rules
+# applications="(Calendar|Mail|Reminders|Notes|Microsoft Outlook|Discord|Messages|Slack|Firefox|Chrome|Code|Microsoft Word|Preview|Terminal|iTerm2|QuickTime|Player|Spotify|Music|Brave Browser|Kitty|Alacritty|Trello)"
+
+# # NOTE: you need to set the settings for the applications in the
+# #       list first, or else they don't apply properly and you can end up with
+# #       some weird border/float/window behaviours
+
+# # everything listed gets sent to below layer to prevent
+# # them from covering floating applications/popup windows
+# yabai -m rule --add app="^${applications}$"    manage=on layer=below
 
 # # ===== Rules ==================================
 

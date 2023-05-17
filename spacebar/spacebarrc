@@ -25,7 +25,7 @@ spacebar -m config power_icon_strip      
 # https://fontawesome.com/v4/icons/
 # Or https://www.nerdfonts.com/font-downloads
 #spacebar -m config space_icon_strip     "[1] cube" "[2] globe" "[3] envelope-open" "[4] comment" "[5] music" "(6) paint-brush" "(7) terminal"
-spacebar -m config space_icon_strip     " ¹" " ²" " ³" " ⁴" " ⁵" " ⁶"
+spacebar -m config space_icon_strip     " ¹" " ²" " ³" " ⁴" " ⁵" " ⁶" "...⁰"
 spacebar -m config space_icon           
 spacebar -m config clock_icon           
 spacebar -m config dnd_icon             
